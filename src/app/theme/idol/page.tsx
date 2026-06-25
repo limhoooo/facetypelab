@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: '내가 아이돌이었다면? 기획사 얼굴상 분석',
     description: 'SM? YG? HYBE? JYP? 당신의 얼굴은 어느 기획사 스타일인가요?',
+    url: 'https://facetypelab.pages.dev/theme/idol',
+    siteName: 'FaceType Lab',
   },
 };
 

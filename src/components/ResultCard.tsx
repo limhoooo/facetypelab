@@ -35,7 +35,7 @@ export default function ResultCard({ predictions, userImageSrc, onReset }: Resul
     const label = agencyClass
       ? `${agencyClass.agencyName} ${agencyClass.genderLabel}`
       : legacyAgency!.nameKo + ' 얼굴상';
-    const text = `나는 ${label}! ${display.emoji}\n"내가 아이돌이었다면?" 테스트 해보기 → facetypelab.com`;
+    const text = `나는 ${label}! ${display.emoji}\n"내가 아이돌이었다면?" 테스트 해보기 → https://facetypelab.pages.dev/theme/idol`;
     if (navigator.share) {
       await navigator.share({ text });
     } else {
