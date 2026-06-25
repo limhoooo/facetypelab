@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --font-sans: var(--font-geist);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* 분석 화면 — 스캔 라인 */
+@keyframes scan-line {
+  0%   { top: 0%; opacity: 1; }
+  48%  { opacity: 1; }
+  50%  { top: calc(100% - 2px); opacity: 0.4; }
+  52%  { opacity: 1; }
+  100% { top: 0%; opacity: 1; }
+}
+.scan-line {
+  animation: scan-line 1.6s ease-in-out infinite;
+}
+
+/* 분석 화면 — 코너 브라켓 확장 */
+@keyframes corner-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.2); opacity: 0.6; }
+}
+.corner-pulse {
+  animation: corner-pulse 1.2s ease-in-out infinite;
+}
+
+/* 분석 화면 — 링 레이더 */
+@keyframes radar-ring {
+  0%   { transform: scale(0.6); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.radar-ring {
+  animation: radar-ring 1.8s ease-out infinite;
+}
+.radar-ring-delay {
+  animation: radar-ring 1.8s ease-out infinite 0.9s;
+}
+
+/* 분석 화면 — 글리치 텍스트 */
+@keyframes glitch {
+  0%, 90%, 100% { transform: translate(0); }
+  92%           { transform: translate(-2px, 1px); }
+  94%           { transform: translate(2px, -1px); }
+  96%           { transform: translate(-1px, 2px); }
+}
+.glitch {
+  animation: glitch 3s infinite;
+}
